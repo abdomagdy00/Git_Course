@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--mainColor);
+}
+@media (max-width: 390px) {
+  .header {
+    color: red;
+  }
+}
+@media (min-width: 390px) {
+  .header {
+    color: green;
+  }
+}
+@media (min-width: 570px) {
+  .header {
+    color: blue;
+  }
+}
+@media (min-width: 960px) {
+  .header {
+    color: yellow;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    color: purple;
+  }
+}/*# sourceMappingURL=style.css.map */

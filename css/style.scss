@@ -1,0 +1,21 @@
+@use "./components/mixins" as *;
+
+.header {
+	@include flex(space-between, center);
+	color: var(--mainColor);
+	@include width(xsm) {
+		color: red;
+	}
+	@include width(sm) {
+		color: green;
+	}
+	@include width(md) {
+		color: blue;
+	}
+	@include width(lg) {
+		color: yellow;
+	}
+	@include width(xlg) {
+		color: purple;
+	}
+}

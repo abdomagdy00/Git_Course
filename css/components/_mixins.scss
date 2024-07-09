@@ -1,0 +1,53 @@
+@mixin flex($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin absolute($dir, $x, $y) {
+	position: absolute;
+	@if ($dir == tr) {
+		top: $y;
+		right: $x;
+	}
+	@if ($dir == tl) {
+		top: $y;
+		left: $x;
+	}
+	@if ($dir == br) {
+		bottom: $y;
+		right: $x;
+	}
+	@if ($dir == bl) {
+		bottom: $y;
+		left: $x;
+	}
+}
+
+@mixin width($size) {
+	@if ($size == xsm) {
+		@media (max-width: 390px) {
+			@content;
+		}
+	}
+	@if ($size == sm) {
+		@media (min-width: 390px) {
+			@content;
+		}
+	}
+	@if ($size == md) {
+		@media (min-width: 570px) {
+			@content;
+		}
+	}
+	@if ($size == lg) {
+		@media (min-width: 960px) {
+			@content;
+		}
+	}
+	@if ($size == xlg) {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
